@@ -6,7 +6,7 @@ ties = 0
 while True:
     print(str(wins)+' Wins, '+str(losses)+' Losses, '+str(ties)+' Ties')
     while True:
-        print('Enter your move: (r)ock (p)aper (c)cissors or (q)uit')
+        print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')
         player_move = input()
         if player_move == 'q':
             sys.exit()

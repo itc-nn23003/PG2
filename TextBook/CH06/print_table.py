@@ -1,8 +1,15 @@
 def print_table(table_data):
-    col_widths = [max(len(item) for item in column) for column in zip(*table_data)]
-    
+    num_rows = len(table_data)
+    num_cols = len(table_data[0])
+
+    col_widths = [0] * num_cols
+
+    for col in range(num_cols):
+        for row in range(num_rows):
+            col_widths[col] = max(col_widths[col], len(table_data[row][col]))
+
     for row in table_data:
-        formatted_row = [item.rjust(col_widths[i]) for i, item in enumerate(row)]
+        formatted_row = [row[col].rjust(col_widths[col]) for col in range(num_cols)]
         print(' '.join(formatted_row))
 
 table_data = [

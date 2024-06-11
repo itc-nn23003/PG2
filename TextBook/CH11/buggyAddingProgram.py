@@ -1,0 +1,7 @@
+print('足し合わせる第一の数を入力してください。:')
+first = input()
+print('足し合わせる第二の数を入力してください。:')
+second = input()
+print('足し合わせる第三の数を入力してください。:')
+third = input()
+print('合計は' + first + second + third)
